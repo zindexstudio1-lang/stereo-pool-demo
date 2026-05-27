@@ -2,106 +2,87 @@ import React from 'react';
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-white selection:bg-zinc-800 selection:text-white relative overflow-hidden font-sans">
+    <div className="min-h-screen bg-black text-white selection:bg-fuchsia-600 selection:text-white font-sans overflow-x-hidden">
       
-      {/* EFECTO DE GLOW / RADIAL GRADIENT EN EL FONDO */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[600px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-zinc-900/60 via-neutral-950 to-neutral-950 pointer-events-none z-0" />
-
-      {/* NAVBAR MINIMALISTA */}
-      <nav className="relative z-10 max-w-7xl mx-auto px-6 h-24 flex items-center justify-between border-b border-zinc-900">
-        <div className="flex items-center gap-3">
-          {/* Marcador de posición para su Isotipo/Logo */}
-          <div className="w-9 h-9 bg-gradient-to-tr from-white to-zinc-500 rounded-lg flex items-center justify-center font-black text-black text-sm tracking-tighter">
-            SP
+      {/* NAVBAR */}
+      <nav className="w-full border-b border-zinc-900 bg-black/80 backdrop-blur-md fixed top-0 z-50">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <div className="flex items-center gap-3">
+            {/* Logo Placeholder */}
+            <div className="w-10 h-10 rounded-full border-2 border-fuchsia-600 flex items-center justify-center font-black text-sm tracking-tighter">
+              SP
+            </div>
+            <span className="font-bold text-xl tracking-[0.2em] uppercase">Stereo Pool</span>
           </div>
-          <span className="font-bold text-lg tracking-wider uppercase text-zinc-200 hidden sm:block">
-            Stereo Pool
-          </span>
-        </div>
-        
-        <div className="flex items-center gap-4">
-          <span className="text-xs text-zinc-500 font-mono tracking-widest uppercase hidden md:block">
-            // Next.js Infrastructure
-          </span>
-          <div className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
+          <div className="hidden md:flex gap-8 text-xs font-bold tracking-widest uppercase text-zinc-400">
+            <a href="#" className="hover:text-fuchsia-500 transition-colors">Inicio</a>
+            <a href="#" className="hover:text-fuchsia-500 transition-colors">Servicios</a>
+            <a href="#" className="hover:text-fuchsia-500 transition-colors">Historia</a>
+          </div>
         </div>
       </nav>
 
-      {/* HERO SECTION PRINCIPAL */}
-      <main className="relative z-10 max-w-5xl mx-auto px-6 pt-24 pb-32 text-center flex flex-col items-center justify-center min-h-[calc(100vh-96px)]">
+      {/* HERO SECTION */}
+      <main className="relative pt-32 pb-20 px-6 max-w-7xl mx-auto flex flex-col items-center text-center min-h-screen justify-center">
         
-        {/* BADGE DE ALTA VELOCIDAD */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-800 text-xs font-medium text-zinc-400 mb-8 backdrop-blur-sm animate-fade-in">
-          <span className="flex h-2 w-2 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-zinc-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-zinc-300"></span>
-          </span>
-          Rendimiento Ultra-Rápido Core Vercel (Fuera de WordPress)
-        </div>
+        {/* Efecto Glow Neon de Fondo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-fuchsia-600/20 blur-[100px] rounded-full pointer-events-none z-0"></div>
 
-        {/* TITULAR PRINCIPAL (H1) CON DEGRADADO DE TEXTO */}
-        <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white max-w-4xl leading-[1.1] mb-6">
-          El Nivel Supremo de la{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-zinc-100 via-zinc-400 to-zinc-600">
-            Barbería en Lima.
-          </span>
-        </h1>
-
-        {/* SUBTÍTULO COMERCIAL */}
-        <p className="text-zinc-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-normal leading-relaxed mb-12">
-          Más que un corte, una experiencia inmersiva de alta fidelidad. Lujo, precisión, sonido análogo y pool club en un solo espacio. Agenda al instante sin intermediarios lentos.
-        </p>
-
-        {/* BOTONES DE LLAMADO A LA ACCIÓN (CTA) ESTILO SAAS */}
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-20 w-full sm:w-auto">
-          <button className="w-full sm:w-auto bg-white text-black text-sm font-semibold rounded-full px-8 py-3.5 hover:bg-zinc-200 active:scale-95 transition-all duration-200 shadow-[0_0_25px_rgba(255,255,255,0.15)]">
-            Reservar una Cita
-          </button>
-          <button className="w-full sm:w-auto bg-zinc-900/50 text-zinc-300 text-sm font-semibold rounded-full px-8 py-3.5 border border-zinc-800 hover:bg-zinc-900 hover:text-white active:scale-95 transition-all duration-200 backdrop-blur-sm">
-            Ver Carta de Servicios
-          </button>
-        </div>
-
-        {/* LAS PÍLDORAS TÉCNICAS (EL GANCHO PARA EL PANEL BACKEND) */}
-        <div className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-zinc-900 pt-10 text-left">
+        <div className="relative z-10 w-full max-w-5xl mx-auto">
           
-          <div className="p-4 rounded-xl bg-zinc-900/20 border border-zinc-900/60 backdrop-blur-sm">
-            <div className="text-zinc-200 font-semibold text-sm mb-1 flex items-center gap-2">
-              <span className="text-zinc-500">01.</span> Reservas en Tiempo Real
-            </div>
-            <p className="text-xs text-zinc-500 leading-relaxed">
-              Base de datos PostgreSQL directa. Olvídate de los retrasos e interferencias de plugins externos de terceros.
-            </p>
-          </div>
+          {/* Titular Idéntico al Original pero más impactante */}
+          <h1 className="text-5xl sm:text-7xl md:text-8xl font-black tracking-widest uppercase text-white mb-6 leading-[1.1] drop-shadow-2xl">
+            Lujo y Precisión <br className="hidden sm:block"/> 
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-500 to-purple-600">
+              En Cada Corte
+            </span>
+          </h1>
 
-          <div className="p-4 rounded-xl bg-zinc-900/20 border border-zinc-900/60 backdrop-blur-sm">
-            <div className="text-zinc-200 font-semibold text-sm mb-1 flex items-center gap-2">
-              <span className="text-zinc-500">02.</span> Automatización WhatsApp
-            </div>
-            <p className="text-xs text-zinc-500 leading-relaxed">
-              Confirmaciones automáticas y flujos de recordatorio integrados directamente a través de la API Oficial de Meta.
-            </p>
-          </div>
+          {/* Subtítulo */}
+          <p className="text-zinc-300 text-lg md:text-xl font-light mb-12 max-w-2xl mx-auto">
+            Ofrecemos una experiencia exclusiva con servicios premium y barberos altamente calificados. Sistema de reservas integrado.
+          </p>
 
-          <div className="p-4 rounded-xl bg-zinc-900/20 border border-zinc-900/60 backdrop-blur-sm">
-            <div className="text-zinc-200 font-semibold text-sm mb-1 flex items-center gap-2">
-              <span className="text-zinc-500">03.</span> Panel Multi-Tenant
-            </div>
-            <p className="text-xs text-zinc-500 leading-relaxed">
-              Control de sucursales unificado, analíticas de rendimiento por barbero e historial financiero centralizado.
-            </p>
-          </div>
+          {/* Botón Principal (Neón) */}
+          <button className="bg-fuchsia-600 text-white font-black tracking-widest uppercase px-12 py-5 rounded-md hover:bg-fuchsia-500 active:scale-95 transition-all duration-300 shadow-[0_0_30px_rgba(192,38,211,0.5)]">
+            Reservar Ahora
+          </button>
+        </div>
 
+        {/* SECCIÓN SERVICIOS (Para demostrar la estructura limpia B2B) */}
+        <div className="relative z-10 w-full mt-32 border-t border-zinc-900 pt-16">
+          <h2 className="text-2xl font-bold tracking-[0.3em] uppercase text-center mb-12">Expertos En</h2>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-left">
+            
+            {/* Card 1 */}
+            <div className="bg-zinc-950/50 border border-zinc-800 hover:border-fuchsia-500 p-8 transition-colors group cursor-pointer backdrop-blur-sm">
+              <h3 className="font-black text-xl uppercase tracking-widest mb-3 text-fuchsia-500 group-hover:text-white transition-colors">Corte</h3>
+              <p className="text-sm text-zinc-500">Diseños clásicos y modernos con precisión quirúrgica.</p>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-zinc-950/50 border border-zinc-800 hover:border-fuchsia-500 p-8 transition-colors group cursor-pointer backdrop-blur-sm">
+              <h3 className="font-black text-xl uppercase tracking-widest mb-3 text-fuchsia-500 group-hover:text-white transition-colors">Barba</h3>
+              <p className="text-sm text-zinc-500">Perfilado, ritual de toallas calientes y productos premium.</p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-zinc-950/50 border border-zinc-800 hover:border-fuchsia-500 p-8 transition-colors group cursor-pointer backdrop-blur-sm">
+              <h3 className="font-black text-xl uppercase tracking-widest mb-3 text-fuchsia-500 group-hover:text-white transition-colors">Platinado</h3>
+              <p className="text-sm text-zinc-500">Colorimetría avanzada cuidando la salud de tu cabello.</p>
+            </div>
+
+            {/* Card 4 */}
+            <div className="bg-zinc-950/50 border border-zinc-800 hover:border-fuchsia-500 p-8 transition-colors group cursor-pointer backdrop-blur-sm">
+              <h3 className="font-black text-xl uppercase tracking-widest mb-3 text-fuchsia-500 group-hover:text-white transition-colors">Facial</h3>
+              <p className="text-sm text-zinc-500">Limpieza profunda y exfoliación para renovar tu piel.</p>
+            </div>
+
+          </div>
         </div>
 
       </main>
-
-      {/* FOOTER DISCRETO */}
-      <footer className="relative z-10 max-w-7xl mx-auto px-6 py-8 flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600 border-t border-zinc-900">
-        <div>&copy; {new Date().getFullYear()} Stereo Pool Barber. Concepto tecnológico de prueba.</div>
-        <div className="mt-2 sm:mt-0 font-mono tracking-tight">Engineered by Z-INDEX STUDIO</div>
-      </footer>
-
     </div>
   );
 }

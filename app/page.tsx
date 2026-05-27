@@ -5,21 +5,16 @@ export default function HomePage() {
     <div className="min-h-screen bg-black text-white selection:bg-fuchsia-600 selection:text-white font-sans overflow-x-hidden scroll-smooth">
       
       {/* 1. NAVBAR FIJO CON EFECTO BLUR */}
-      <nav className="w-full border-b border-zinc-900 bg-black/80 backdrop-blur-md fixed top-0性能 z-50">
+      <nav className="w-full border-b border-zinc-900 bg-black/80 backdrop-blur-md fixed top-0 z-50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {/* Logo real cargado desde la carpeta public */}
-            <div className="w-12 h-12 rounded-full overflow-hidden border border-zinc-850 flex items-center justify-center bg-zinc-900">
+            <div className="w-12 h-12 rounded-full overflow-hidden border border-zinc-800 flex items-center justify-center bg-zinc-900">
               <img 
                 src="/logo.png" 
                 alt="Stereo Pool Logo" 
                 className="w-full h-full object-cover"
-                onError={(e) => {
-                  // Fallback si aún no pones la imagen en public
-                  e.currentTarget.style.display = 'none';
-                }}
               />
-              <span className="text-xs font-bold text-fuchsia-500 font-mono">SP</span>
             </div>
             <span className="font-black text-lg tracking-[0.25em] uppercase bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
               Stereo Pool
@@ -121,9 +116,8 @@ export default function HomePage() {
           {[1, 2, 3, 4].map((index) => (
             <div key={index} className="group relative rounded-lg overflow-hidden border border-zinc-900 bg-zinc-950/40 p-4 flex flex-col items-center">
               <div className="w-full aspect-[4/5] rounded bg-zinc-900 relative overflow-hidden mb-4 border border-zinc-800 group-hover:border-fuchsia-500/50 transition-colors duration-300">
-                {/* Cuadro gris elegante simulando foto de barbero */}
                 <div className="absolute inset-0 flex items-center justify-center text-zinc-700 font-mono text-xs uppercase">
-                  [ BARBER IMAGE ]
+                  [ FOTO ]
                 </div>
               </div>
               <h4 className="font-bold text-sm tracking-widest uppercase mb-1">MARKUS K.</h4>
@@ -188,7 +182,7 @@ export default function HomePage() {
       {/* 6. FOOTER CORPORATIVO */}
       <footer className="border-t border-zinc-900 bg-black py-10 px-6">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between text-xs text-zinc-600 gap-4">
-          <div>&copy; {new Date().getFullYear()} Stereo Pool Barber. Todos los derechos reservados.</div>
+          <div>© {new Date().getFullYear()} Stereo Pool Barber. Todos los derechos reservados.</div>
           <div className="font-mono tracking-widest uppercase text-[10px] text-zinc-500">
             Engineered by <span className="text-white font-bold">Z-INDEX STUDIO</span>
           </div>

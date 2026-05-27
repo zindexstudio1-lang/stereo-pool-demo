@@ -9,13 +9,13 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           <div className="flex items-center gap-3">
             {/* Logo real cargado desde la carpeta public */}
-            <div className="w-12 h-12 rounded-full overflow-hidden border border-zinc-800 flex items-center justify-center bg-zinc-900">
-              <img 
-                src="/logo.png" 
-                alt="Stereo Pool Logo" 
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <div className="w-16 h-16 rounded-full border border-zinc-800 bg-zinc-900 flex justify-center items-center p-1.5 shadow-[0_0_20px_rgba(255,255,255,0.05)]">
+  <img 
+    src="/logo.png" 
+    alt="Stereo Pool Logo" 
+    className="w-full h-full object-cover rounded-full"
+  />
+</div>
             <span className="font-black text-lg tracking-[0.25em] uppercase bg-gradient-to-r from-white to-zinc-400 bg-clip-text text-transparent">
               Stereo Pool
             </span>
@@ -142,7 +142,7 @@ export default function HomePage() {
             <div className="text-sm font-bold uppercase tracking-wider mb-2">Dirección</div>
             <div className="text-sm text-zinc-400 font-light mb-4">Stereo Pool Barber, Comas, Lima, Perú</div>
             <a 
-              href="https://maps.google.com" 
+              href="https://maps.app.goo.gl/Cd1BLmm42R37PufN8" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-fuchsia-400 hover:text-fuchsia-300 transition-colors"

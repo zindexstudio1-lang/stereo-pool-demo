@@ -9,11 +9,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      // Configuraciones estéticas base (limpiando herencia no deseada)
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      // 👇 Añadimos la animación del Poste de Barbero aquí
+      keyframes: {
+        'barber-slide': {
+          '0%': { backgroundPosition: '0 0' },
+          '100%': { backgroundPosition: '40px 40px' },
+        }
+      },
+      animation: {
+        'barber-slide': 'barber-slide 1.5s linear infinite',
+      }
     },
   },
   plugins: [],
